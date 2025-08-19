@@ -5,9 +5,7 @@ Transformer performs better with multiplicative MLPs.
 Note: bias=False might be important.
 
 ```
-baseline: step 2000: train loss 1.7648, val loss 1.8857
-```
-```
+baseline:       step 2000: train loss 1.7648, val loss 1.8857
 multiplicative: step 2000: train loss 1.5940, val loss 1.7528
 ```
 
