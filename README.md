@@ -20,10 +20,10 @@ class MLP(nn.Module):
         self.dropout = nn.Dropout(config.dropout)
 
     def forward(self, x):
-        x = self.c_fc(x) * self.c_fc(x)
-        x = self.gelu(x)
-        x = self.c_proj(x) * self.c_proj(x)
-        x = self.dropout(x)
+        x = self.c_fc(x)
+        x = self.gelu(x**2)
+        x = self.c_proj(x)
+        x = self.dropout(x**2)
         return x
 ```
 
