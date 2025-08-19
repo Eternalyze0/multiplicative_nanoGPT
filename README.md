@@ -1,5 +1,7 @@
 # Multiplicative nanoGPT
 
+Note: bias=False might be important.
+
 ```
 baseline: step 2000: train loss 1.7648, val loss 1.8857
 ```
