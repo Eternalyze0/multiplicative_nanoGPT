@@ -1,5 +1,7 @@
 # Multiplicative nanoGPT
 
+Transformer performs better with multiplicative MLPs. 
+
 Note: bias=False might be important.
 
 ```
