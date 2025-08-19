@@ -1,6 +1,6 @@
 # Multiplicative nanoGPT
 
-Transformer performs better with multiplicative MLPs. The hypothesis is that multiplication add sensitivity resulting in faster learning.
+Transformer performs better with multiplicative MLPs. The hypothesis is that multiplication adds sensitivity resulting in faster learning.
 
 Note: bias=False might be important.
 
