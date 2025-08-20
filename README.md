@@ -27,6 +27,27 @@ class MLP(nn.Module):
         return x
 ```
 
+For tokenization that isn't char-level what works better is:
+
+```py
+class MLP(nn.Module):
+
+    def __init__(self, config):
+        super().__init__()
+        self.c_fc    = nn.Linear(config.n_embd, config.n_embd, bias=False)
+        self.gelu    = nn.GELU()
+        self.c_proj  = nn.Linear(config.n_embd, config.n_embd, bias=False)
+        self.dropout = nn.Dropout(config.dropout)
+
+    def forward(self, x):
+        x = self.c_fc(x)
+        x = self.gelu(x)
+        x = self.c_proj(x)
+        # x = self.dropout(x)
+        x = torch.abs(x)**0.5
+        return x
+```
+
 ## Usage
 
 ```
